@@ -1,0 +1,36 @@
+{
+  "name": "electronbuildersample",
+  "version": "1.0.0",
+  "description": "electronbuildersample app",
+  "main": "index.js",
+  "author":"devsb",
+  "license": "MIT",
+  "scripts": {
+    "start":"electron ./app --enable-logging",
+    "dev":"NODE_ENV='development' npm run start",
+    "macbuild":"build --mac --x64",
+    "winbuild":"build --win --ia32"
+  },
+  "build": {
+    "appId": "com.test.electronbuildersample",
+    "asar": false,
+    "electronVersion":"1.7.3",
+    "mac": {
+      "category": "public.app-category.business"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solomon-m/electronbuilderSample.git"
+  },
+  "author": "solomon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Solomon-m/electronbuilderSample/issues"
+  },
+  "homepage": "https://github.com/Solomon-m/electronbuilderSample#readme",
+  "devDependencies": {
+    "electron-builder": "^19.6.3",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
