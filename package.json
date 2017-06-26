@@ -1,42 +1,48 @@
 {
   "name": "electronbuildersample",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "electronbuildersample app",
   "main": "index.js",
-  "author":"devsb",
+  "author": "solomon",
   "license": "MIT",
   "scripts": {
-    "start":"electron ./app --enable-logging",
-    "dev":"NODE_ENV='development' npm run start",
-    "macbuild":"build --mac --x64",
-    "winbuild":"build --win --ia32"
+    "start": "electron ./app --enable-logging",
+    "dev": "NODE_ENV='development' npm run start",
+    "macbuild": "build --mac --x64",
+    "winbuild": "build --win --ia32"
   },
   "build": {
     "appId": "com.test.electronbuildersample",
     "asar": false,
-    "electronVersion":"1.7.3",
+    "electronVersion": "1.7.3",
     "mac": {
       "category": "public.app-category.business"
     },
-    "publish":[{
-      "provider":"github",
-      "owner":"Solomon-m",
-      "repo":"electronbuildersample",
-      "token":"ab0b8fa15e3e5dc23d94bbf30be7bfa3b21e22b2"
-    }]
+    "win": {
+      "target": "squirrel",
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "Solomon-m",
+          "repo": "electronbuildersample",
+          "token": "04b5d39b19ac995e09642c6332bb4e0c9b7828a8"
+        }
+      ],
+      "certificateFile": "F:\\solomon\\codebase\\electronbuilderSample\\build\\A-CTI+Full+Incorporated.p12",
+      "icon": "F:\\solomon\\codebase\\electronbuilderSample\\build\\AW_install_icon.ico"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Solomon-m/electronbuilderSample.git"
   },
-  "author": "solomon",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Solomon-m/electronbuilderSample/issues"
   },
   "homepage": "https://github.com/Solomon-m/electronbuilderSample#readme",
   "devDependencies": {
     "electron-builder": "^19.6.3",
+    "electron-builder-squirrel-windows": "^19.8.0",
     "electron-prebuilt": "^1.4.13"
   }
 }
