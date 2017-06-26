@@ -17,7 +17,13 @@
     "electronVersion":"1.7.3",
     "mac": {
       "category": "public.app-category.business"
-    }
+    },
+    "publish":[{
+      "provider":"github",
+      "owner":"Solomon-m",
+      "repo":"electronbuildersample",
+      "token":"ab0b8fa15e3e5dc23d94bbf30be7bfa3b21e22b2"
+    }]
   },
   "repository": {
     "type": "git",
